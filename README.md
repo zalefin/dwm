@@ -7,3 +7,4 @@ Zach's fork of the Suckless Dynamic Window Manager at [dwm.suckless.org](https:/
 
 ## Depends
 - libxcb
+- Sauce Code Pro Nerd Font (can be changed in config.h)
