@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="dwm.png">
+</div>
+
 # dwm
 Zach's fork of the Suckless Dynamic Window Manager at [dwm.suckless.org](https://dwm.suckless.org)
 
