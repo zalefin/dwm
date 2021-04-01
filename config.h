@@ -31,7 +31,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "a", "o", "e", "u"};
+static const char *tags[] = { "아", "오", "이", "우"};
 
 static const Rule rules[] = {
 	/* xprop(1):
