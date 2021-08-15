@@ -31,7 +31,11 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "아", "오", "이", "우"};
+/* static const char *tags[] = { "아", "오", "이", "우"}; */
+/* static const char *tags[] = { "一", "二", "三", "四"}; */
+
+/* static const char *tags[] = { "일", "이", "삼", "사", "오" }; */
+static const char *tags[] = { "아", "오", "에", "우", "이", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -83,8 +87,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	/* { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } }, */
+	/* { MODKEY,                       XK_d,      incnmaster,     {.i = -1 } }, */
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
@@ -124,7 +128,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_o,                      1)
 	TAGKEYS(                        XK_e,                      2)
 	TAGKEYS(                        XK_u,                      3)
-	TAGKEYS(                        XK_5,                      4)
+	TAGKEYS(                        XK_i,                      4)
 	TAGKEYS(                        XK_6,                      5)
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
