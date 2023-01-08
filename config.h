@@ -35,7 +35,8 @@ static const char *colors[][3]      = {
 /* static const char *tags[] = { "一", "二", "三", "四"}; */
 
 /* static const char *tags[] = { "일", "이", "삼", "사", "오" }; */
-static const char *tags[] = { "아", "오", "에", "우", "이", };
+/* static const char *tags[] = { "아", "오", "에", "우", "이", }; */
+static const char *tags[] = { "", "", "", "", "", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -75,13 +76,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", gruvbox_bg0_h, "-nf", gruvbox_fg, "-sb", gruvbox_fg, "-sf", gruvbox_bg, NULL };
+/* static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", gruvbox_bg0_h, "-nf", gruvbox_fg, "-sb", gruvbox_fg, "-sf", gruvbox_bg, NULL }; */
+static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	/* { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } }, */
-	{ MODKEY,                       XK_p,      spawn,          SHCMD("fzf_run")},
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	/* { MODKEY,                       XK_p,      spawn,          SHCMD("fzf_run")}, */
 	/* { MODKEY|ControlMask,           XK_p,      spawn,          {.v = floatcmd } }, */
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
